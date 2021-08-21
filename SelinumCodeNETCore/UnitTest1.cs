@@ -32,9 +32,21 @@ namespace SelinumCodeNETCore
 
         }
 
-        private void SeleniumExtras(IWebDriver arg)
+        [Test]
+        public void CheckElements()
         {
-            throw new NotImplementedException();
+            driver.Navigate().GoToUrl("https://demowf.aspnetawesome.com/");
+            driver.Manage().Window.Maximize();
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
+            driver.FindElement(By.CssSelector("#ContentPlaceHolder1_Meal")).SendKeys("Tomato");
+
+           var menu= Libconfiguration.DisplayAllElementsInComboBoxDropdown("ContentPlaceHolder1_AllMealsCombo");
+
+            foreach(var item in menu)
+            {
+                Console.WriteLine($"The Item is {item}");
+            }
+
         }
 
         [TearDown]
