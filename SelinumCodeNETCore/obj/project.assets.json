@@ -4888,11 +4888,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AnandKrishnan\\source\\repos\\SelinumCodeNETCore\\SelinumCodeNETCore\\SelinumCodeNETCore.csproj",
+      "projectUniqueName": "C:\\Users\\AnandKrishnan\\Documents\\GitHub\\SeleniumCodeNetCore\\SelinumCodeNETCore\\SelinumCodeNETCore.csproj",
       "projectName": "SelinumCodeNETCore",
-      "projectPath": "C:\\Users\\AnandKrishnan\\source\\repos\\SelinumCodeNETCore\\SelinumCodeNETCore\\SelinumCodeNETCore.csproj",
+      "projectPath": "C:\\Users\\AnandKrishnan\\Documents\\GitHub\\SeleniumCodeNetCore\\SelinumCodeNETCore\\SelinumCodeNETCore.csproj",
       "packagesPath": "C:\\Users\\AnandKrishnan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AnandKrishnan\\source\\repos\\SelinumCodeNETCore\\SelinumCodeNETCore\\obj\\",
+      "outputPath": "C:\\Users\\AnandKrishnan\\Documents\\GitHub\\SeleniumCodeNetCore\\SelinumCodeNETCore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\AnandKrishnan\\AppData\\Roaming\\NuGet\\NuGet.Config",

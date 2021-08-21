@@ -41,7 +41,6 @@ namespace SelinumCodeNETCore
         public void TearDown()
         {
              driver.Close();
-             driver.Quit();
         }
     }
 }
