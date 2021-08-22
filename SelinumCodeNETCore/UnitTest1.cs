@@ -54,12 +54,11 @@ namespace SelinumCodeNETCore
         public void LoginTest()
         {
             driver.Navigate().GoToUrl("http://eaapp.somee.com/");
+            driver.Manage().Window.Maximize();
 
+            var homePage = new HomePage();
+            var loginPage = homePage.ClickLnkLogin();
 
-            HomePage homePage = new HomePage();
-            LoginPage loginPage = new LoginPage();
-
-            homePage.ClickLnkLogin();
             loginPage.EnterUserNameAndPassword("admin", "password");
             loginPage.ClickLogin();
 
