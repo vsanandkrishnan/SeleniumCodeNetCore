@@ -7,6 +7,7 @@ using SelinumCodeNETCore.Utilities;
 using System.Collections.Generic;
 using OpenQA.Selenium.Support.UI;
 using System.Threading;
+using SelinumCodeNETCore.Pages;
 
 namespace SelinumCodeNETCore
 {
@@ -53,6 +54,16 @@ namespace SelinumCodeNETCore
         public void LoginTest()
         {
             driver.Navigate().GoToUrl("http://eaapp.somee.com/");
+
+
+            HomePage homePage = new HomePage();
+            LoginPage loginPage = new LoginPage();
+
+            homePage.ClickLnkLogin();
+            loginPage.EnterUserNameAndPassword("admin", "password");
+            loginPage.ClickLogin();
+
+            Assert.That(homePage.IsLogOffExist(), Is.True,"Log off link not displayed.");
         }
 
         [TearDown]
