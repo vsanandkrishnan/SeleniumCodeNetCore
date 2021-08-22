@@ -21,36 +21,6 @@ namespace SelinumCodeNETCore
         }
 
         [Test]
-        public void CheckTheTest()
-        {
-            driver.Navigate().GoToUrl("https://demowf.aspnetawesome.com/");
-            driver.Manage().Window.Maximize();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
-            driver.FindElement(By.CssSelector("#ContentPlaceHolder1_Meal")).SendKeys("Tomato");
-            driver.FindElement(By.XPath("//input[@name='ctl00$ContentPlaceHolder1$ChildMeal1']/following-sibling::div[text()='Celery']")).Click();      
-
-            Libconfiguration.ComboBoxControl("ContentPlaceHolder1_AllMealsCombo", "Carrot");
-
-        }
-
-        [Test]
-        public void CheckElements()
-        {
-            driver.Navigate().GoToUrl("https://demowf.aspnetawesome.com/");
-            driver.Manage().Window.Maximize();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
-            driver.FindElement(By.CssSelector("#ContentPlaceHolder1_Meal")).SendKeys("Tomato");
-
-           var menu= Libconfiguration.DisplayAllElementsInComboBoxDropdown("ContentPlaceHolder1_AllMealsCombo");
-
-            foreach(var item in menu)
-            {
-                Console.WriteLine($"The Item is {item}");
-            }
-
-        }
-
-        [Test]
         public void LoginTest()
         {
             driver.Navigate().GoToUrl("http://eaapp.somee.com/");
@@ -63,6 +33,9 @@ namespace SelinumCodeNETCore
             loginPage.ClickLogin();
 
             Assert.That(homePage.IsLogOffExist(), Is.True,"Log off link not displayed.");
+
+            homePage.ClickEmployeeList();
+
         }
 
         [TearDown]

@@ -13,6 +13,8 @@ namespace SelinumCodeNETCore.Pages
 
         IWebElement LnklogOff => driver.FindElement(By.LinkText("Log off"));
 
+        IWebElement EmployeeLink => driver.FindElement(By.LinkText("Employee List"));
+
         public LoginPage ClickLnkLogin()
         {
             LnkLogin.Click();
@@ -20,5 +22,9 @@ namespace SelinumCodeNETCore.Pages
         }
 
         public bool IsLogOffExist() => LnklogOff.Displayed;
+
+        public void ClickEmployeeList() => EmployeeLink.Click();
+
+
     }
 }
