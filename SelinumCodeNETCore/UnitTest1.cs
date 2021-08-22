@@ -49,6 +49,12 @@ namespace SelinumCodeNETCore
 
         }
 
+        [Test]
+        public void LoginTest()
+        {
+            driver.Navigate().GoToUrl("http://eaapp.somee.com/");
+        }
+
         [TearDown]
         public void TearDown()
         {
