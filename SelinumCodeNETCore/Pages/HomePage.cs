@@ -23,7 +23,11 @@ namespace SelinumCodeNETCore.Pages
 
         public bool IsLogOffExist() => LnklogOff.Displayed;
 
-        public void ClickEmployeeList() => EmployeeLink.Click();
+        public EmployeeListPage ClickEmployeeList()
+        {
+            EmployeeLink.Click();
+            return new EmployeeListPage();
+        }
 
 
     }

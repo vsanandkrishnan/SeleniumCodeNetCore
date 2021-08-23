@@ -34,7 +34,9 @@ namespace SelinumCodeNETCore
 
             Assert.That(homePage.IsLogOffExist(), Is.True,"Log off link not displayed.");
 
-            homePage.ClickEmployeeList();
+            var employeeListPage=homePage.ClickEmployeeList();
+
+            employeeListPage.ClickOnCreateNewLink();
 
         }
 
