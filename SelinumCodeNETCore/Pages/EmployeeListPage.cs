@@ -10,7 +10,13 @@ namespace SelinumCodeNETCore.Pages
     {
         IWebElement createNewLink => driver.FindElement(By.LinkText("Create New"));
 
-        public void ClickOnCreateNewLink() => createNewLink.Click();
+        public EmployeeCreate ClickOnCreateNewLink()
+        {
+            createNewLink.Click();
+            return new EmployeeCreate();
+        }
+
+        public bool IsCreateButtonDisplayed() => createNewLink.Displayed;
 
     }
 }

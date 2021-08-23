@@ -36,7 +36,13 @@ namespace SelinumCodeNETCore
 
             var employeeListPage=homePage.ClickEmployeeList();
 
-            employeeListPage.ClickOnCreateNewLink();
+            var employeeCreatePage= employeeListPage.ClickOnCreateNewLink();
+
+            var employeeListPageFilled=employeeCreatePage.FillEmployeeDetails("Nithin", "10000", "5", "1", "@gmail.com");
+
+            Assert.That(employeeListPageFilled.IsCreateButtonDisplayed, Is.True, "Create button is not displayed.");
+
+
 
         }
 
